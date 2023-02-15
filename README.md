@@ -1,14 +1,41 @@
-# 1. cvičení
-zkoušíme úpravy tohoto souboru __*README*__ a učíme se ja v něm psát.Třeba jako jak udělat __Bolt__ písmo a nebo *italics* písmo.
+# Lab 1: Matyáš Stanislav Tomeš
 
-1. zkoušíme seznam
-2. další řádek seznamu
-  * další řádek
+### De Morgan's laws
 
-- nový list s sub-listem
-  - toto je sub-list
+1. Equations of all three versions of logic function f(c,b,a):
 
-1. nový list
-  1. další řádek listu
+   ![Logic function](images/equations.png)
 
-[Toto je odkaz na velmi zajimavý video](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+2. Listing of VHDL architecture from design file (`design.vhd`) for all three functions. Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
+
+```vhdl
+architecture dataflow of gates is
+begin
+    f_orig_o <= (not(b_i) and a_i) or (c_i and not(b_i or not(a_i)));
+    f_nand_o <= b_i nand a_i; -- MODIFY THIS FUNCTION
+    f_nor_o  <= b_i nor a_i;  -- MODIFY THIS FUNCTION
+end architecture dataflow;
+```
+
+3. Complete table with logic functions' values:
+
+   | **c** | **b** |**a** | **f_ORIG** | **f_(N)AND** | **f_(N)OR** |
+   | :-: | :-: | :-: | :-: | :-: | :-: |
+   | 0 | 0 | 0 |  |  |  |
+   | 0 | 0 | 1 |  |  |  |
+   | 0 | 1 | 0 |  |  |  |
+   | 0 | 1 | 1 |  |  |  |
+   | 1 | 0 | 0 |  |  |  |
+   | 1 | 0 | 1 |  |  |  |
+   | 1 | 1 | 0 |  |  |  |
+   | 1 | 1 | 1 |  |  |  |
+
+### Distributive laws
+
+1. Screenshot with simulated time waveforms. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
+
+   ![your figure]()
+
+2. Link to your public EDA Playground example:
+
+   [https://www.edaplayground.com/...](https://www.edaplayground.com/...)
