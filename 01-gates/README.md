@@ -4,7 +4,7 @@
 
 1. Equations of all three versions of logic function f(c,b,a):
 
-   ![Logic function](https://github.com/tomesmatyas/digital-electronics-1/blob/main/CodeCogsEqn.png)
+   ![Logic function](https://github.com/tomesmatyas/digital-electronics-1/blob/main/01-gates/CodeCogsEqn.png)
 
 2. Listing of VHDL architecture from design file (`design.vhd`) for all three functions. Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
 
@@ -34,7 +34,7 @@ end architecture dataflow;
 
 1. Screenshot with simulated time waveforms. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
 
-   ![your figure](https://github.com/tomesmatyas/digital-electronics-1/blob/main/Sn%C3%ADmek%20obrazovky_20230215_183419.png)
+   ![your figure](https://github.com/tomesmatyas/digital-electronics-1/blob/main/01-gates/Sn%C3%ADmek%20obrazovky_20230215_183419.png)
 
 2. Link to your public EDA Playground example:
 
