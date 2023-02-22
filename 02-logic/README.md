@@ -1,4 +1,4 @@
-# Lab 2: INSERT_YOUR_FIRSTNAME INSERT_YOUR_LASTNAME
+# Lab 2: Matyáš Tomeš
 
 ### 2-bit comparator
 
@@ -38,7 +38,7 @@
                 (s_B_equals_A  = '0') and
                 (s_B_less_A    = '0'))
         -- If false, then report an error
-        report "Input combination COMPLETE_THIS_TEXT FAILED" severity error;
+        report "Input combination b = 1000, a = 0110 Failed" severity error;
 
         -- Report a note at the end of stimulus process
         report "Stimulus process finished";
