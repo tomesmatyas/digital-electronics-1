@@ -5,12 +5,33 @@
 1. Listing of VHDL architecture from source file `mux_3bit_4to1.vhd`. Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
 
 ```vhdl
+entity mux_3bit_4to1 is
+port (
+    sel         : in    std_logic_vector(1 downto 0);
+    a           : in    std_logic_vector(2 downto 0); 
+    b           : in    std_logic_vector(2 downto 0);
+    c           : in    std_logic_vector(2 downto 0); 
+    d           : in    std_logic_vector(2 downto 0);
+    f           : out   std_logic_vector(2 downto 0)                   
+ );
+end mux_3bit_4to1;
+
 architecture Behavioral of mux_3bit_4to1 is
+
 begin
 
-    -- WRITE YOUR CODE HERE
+ f <= a when (sel = "00" ) else
+       b when (sel = "01") else
+       c when (sel = "10") else
+       d;
 
-end architecture Behavioral;
+p_stimulus : process is
+begin
+
+
+
+end process p_stimulus;
+end Behavioral;
 ```
 
 2. Screenshot with simulated time waveforms. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
