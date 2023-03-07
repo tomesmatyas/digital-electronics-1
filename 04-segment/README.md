@@ -27,21 +27,21 @@
 
    ```vhdl
    --------------------------------------------------------------------
-   -- Experiments on your own: LED(7:4) indicators
+   Experiments on your own: LED(7:4) indicators
 
-   -- Turn LED(4) on if input value is equal to 0, ie "0000"
-   -- LED(4) <= WRITE YOUR CODE HERE
+   Turn LED(4) on if input value is equal to 0, ie "0000"
+   LED(4) <= '1' when sw = "0000" else '0';
 
-   -- Turn LED(5) on if input value is greater than "1001", ie 10, 11, 12, ...
-   -- LED(5) <= WRITE YOUR CODE HERE
+   Turn LED(5) on if input value is greater than "1001", ie 10, 11, 12, ...
+   LED(5) <= '1' when sw > "1001" else '0';
 
-   -- Turn LED(6) on if input value is odd, ie 1, 3, 5, ...
-   -- LED(6) <= WRITE YOUR CODE HERE
+   Turn LED(6) on if input value is odd, ie 1, 3, 5, ...
+   LED(6) <= '1' when sw(0) = '1' else '0';
 
-   -- Turn LED(7) on if input value is a power of two, ie 1, 2, 4, or 8
-   -- LED(7) <= WRITE YOUR CODE HERE
+   Turn LED(7) on if input value is a power of two, ie 1, 2, 4, or 8
+   LED(7) <= '1' when sw = "0001" or sw = "0010" or sw = "0100" or sw = "1000" else '0';
    ```
 
 3. Screenshot with simulated time waveforms for LED(7:4). Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
 
-   ![your figure]()
+   ![your figure](https://github.com/tomesmatyas/digital-electronics-1/blob/main/04-segment/images/Sn%C3%ADmek%20obrazovky%202023-03-07%20092935.png)
