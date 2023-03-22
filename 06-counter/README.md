@@ -12,17 +12,25 @@
     --------------------------------------------------------
     p_cnt_up_down : process (clk) is
     begin
-      if rising_edge(clk) then
-        if (rst = '1') then           -- Synchronous reset
-          sig_cnt <= (others => '0'); -- Clear all bits
-        elsif (en = '1') then         -- Test if counter is enabled
 
-          -- TEST COUNTER DIRECTION HERE
-
+    if rising_edge(clk) then
+      if (rst = '1') then           -- Synchronous reset
+        sig_cnt <= (others => '0'); -- Clear all bits
+      elsif (en = '1') then         -- Test if counter is enabled
+           if (cnt_up = '0') then
+             sig_cnt <= sig_cnt - 1;
+           else 
             sig_cnt <= sig_cnt + 1;
-        end if;
+
+            end if;        -- TEST COUNTER DIRECTION HERE
+
+          
+  
+      
       end if;
-    end process p_cnt_up_down;
+    end if;
+
+  end process p_cnt_up_down;
 ```
 
 2. Screenshot with simulated time waveforms. Test: (a) reset, (b) counter direction, (c) enable. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
